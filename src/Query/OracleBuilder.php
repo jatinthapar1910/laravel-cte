@@ -2,10 +2,10 @@
 
 namespace Staudenmeir\LaravelCte\Query;
 
-use Illuminate\Database\Query\Builder as Base;
 use Staudenmeir\LaravelCte\Query\Traits\BuildsExpressionQueries;
+use Yajra\Oci8\Query\OracleBuilder as Base;
 
-class Builder extends Base
+class OracleBuilder extends Base
 {
     use BuildsExpressionQueries;
 }
