@@ -78,6 +78,8 @@ trait BuildsExpressionQueries
                 return new SQLiteGrammar();
             case 'sqlsrv':
                 return new SqlServerGrammar();
+            case 'oracle':
+                return new OracleGrammar();
         }
 
         throw new RuntimeException('This database is not supported.'); // @codeCoverageIgnore

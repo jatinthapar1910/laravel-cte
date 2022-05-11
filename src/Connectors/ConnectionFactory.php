@@ -6,6 +6,7 @@ use Illuminate\Database\Connection;
 use Illuminate\Database\Connectors\ConnectionFactory as Base;
 use InvalidArgumentException;
 use Staudenmeir\LaravelCte\Connections\MySqlConnection;
+use Staudenmeir\LaravelCte\Connections\OracleConnection;
 use Staudenmeir\LaravelCte\Connections\PostgresConnection;
 use Staudenmeir\LaravelCte\Connections\SQLiteConnection;
 use Staudenmeir\LaravelCte\Connections\SqlServerConnection;
@@ -39,6 +40,8 @@ class ConnectionFactory extends Base
                 return new SQLiteConnection($connection, $database, $prefix, $config);
             case 'sqlsrv':
                 return new SqlServerConnection($connection, $database, $prefix, $config);
+            case 'oracle':
+                return new OracleConnection($connection, $database, $prefix, $config);
         }
 
         throw new InvalidArgumentException("Unsupported driver [{$driver}]"); // @codeCoverageIgnore
