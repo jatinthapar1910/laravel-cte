@@ -3,6 +3,7 @@
 namespace Staudenmeir\LaravelCte\Query\Traits;
 
 use Illuminate\Database\Connection;
+use Illuminate\Database\Query\Expression;
 use Illuminate\Database\Query\Grammars\Grammar;
 use Illuminate\Database\Query\Processors\Processor;
 use RuntimeException;
